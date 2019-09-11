@@ -60,3 +60,7 @@ ON t.genre_id = g.genre_id
 SELECT name FROM artist
 WHERE artist_id 
 IN (SELECT artist_id FROM album WHERE title ILIKE 'a%')
+
+--group by
+SELECT unit_price, count(unit_price) FROM track
+GROUP BY unit_price
